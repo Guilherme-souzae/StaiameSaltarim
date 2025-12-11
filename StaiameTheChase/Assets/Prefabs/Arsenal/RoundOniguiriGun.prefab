@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6036039134589049025}
   - component: {fileID: 42196302809021824}
   m_Layer: 0
-  m_Name: RoundNiguiriGun
+  m_Name: RoundOniguiriGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
