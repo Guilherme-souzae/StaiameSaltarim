@@ -14,4 +14,9 @@ public class Projectile : MonoBehaviour
     {
         rb.linearVelocity = transform.up * speed;
     }
+
+    private void OnBecameInvisible()
+    {
+        ObjectPool.Instance.Recycle(gameObject);
+    }
 }

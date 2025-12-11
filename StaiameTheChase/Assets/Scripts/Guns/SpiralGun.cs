@@ -24,8 +24,7 @@ public class SpiralGun : BaseGun
         for (int i = 0; i < shots; i++)
         {
             Quaternion rotation = Quaternion.Euler(0, 0, transform.eulerAngles.z + angle);
-            Instantiate(bulletPrefab, transform.position, rotation);
-
+            ObjectPool.Instance.Instantiate(bulletPrefab, transform.position, rotation);
             angle += angleStep;
 
             yield return new WaitForSeconds(delay);

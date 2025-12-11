@@ -11,7 +11,7 @@ public class CircleGun : BaseGun
         {
             float angle = step * i;
             Quaternion rotation = Quaternion.Euler(0, 0, transform.eulerAngles.z + angle);
-            Instantiate(bulletPrefab, transform.position, rotation);
+            ObjectPool.Instance.Instantiate(bulletPrefab, transform.position, rotation);
         }
     }
 }
