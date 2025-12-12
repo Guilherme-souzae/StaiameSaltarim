@@ -18,6 +18,8 @@ public abstract class BaseGun : MonoBehaviour
 
     public void tryShoot()
     {
+        if (isActiveAndEnabled == false) return;
+
         if (isContinuous)
             ContinuousShoot();    // Sem corrotinas
         else

@@ -18,4 +18,9 @@ public class EnemyController : MonoBehaviour
             yield return action.CreateAction().Execute(this);
         }
     }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
 }
