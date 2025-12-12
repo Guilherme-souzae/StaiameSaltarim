@@ -19,4 +19,9 @@ public class Projectile : MonoBehaviour
     {
         ObjectPool.Instance.Recycle(gameObject);
     }
+
+    private void OnEnable()
+    {
+        rb.linearVelocity = transform.up * speed;
+    }
 }

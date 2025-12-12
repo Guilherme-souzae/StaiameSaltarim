@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class SpiralGun : BaseGun
+public class DoubleSpiralGun : BaseGun
 {
     public bool clockwise = true;
     public float angleStep = 10f;
@@ -29,6 +29,7 @@ public class SpiralGun : BaseGun
                 : Quaternion.Euler(0, 0, transform.eulerAngles.z - angle);
 
             ObjectPool.Instance.Instantiate(bulletPrefab, transform.position, rotation);
+            ObjectPool.Instance.Instantiate(bulletPrefab, transform.position, rotation * Quaternion.Euler(0, 0, 180f));
 
             angle += angleStep;
 

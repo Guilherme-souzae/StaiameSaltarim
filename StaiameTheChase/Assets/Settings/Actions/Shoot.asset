@@ -10,7 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca8055f8acf1357468c70e195f6c907a, type: 3}
-  m_Name: NiguiriShoot
+  m_Name: Shoot
   m_EditorClassIdentifier: Assembly-CSharp::ShootActionSO
-  times: 1
-  interval: 1
