@@ -23,4 +23,13 @@ public class PlayerMovement : MonoBehaviour
             heart.SetActive(false);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        // Verifica se o objeto que encostou tem a tag
+        if (other.CompareTag("EnemyProjectile"))
+        {
+            ObjectPool.Instance.Recycle(other.gameObject);
+        }
+    }
 }

@@ -6,6 +6,7 @@ public class EnemyController : MonoBehaviour
 {
     public List<ScriptableEnemyAction> actions;
 
+    public int hp = 3;
     private void Start()
     {
         StartCoroutine(RunBehavior());
@@ -22,5 +23,18 @@ public class EnemyController : MonoBehaviour
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("PlayerProjectile"))
+        {
+            hp--;
+            ObjectPool.Instance.Recycle(collision.gameObject);
+            if (hp <= 0)
+            {
+                ObjectPool.Instance.Recycle(gameObject);
+            }
+        }
     }
 }

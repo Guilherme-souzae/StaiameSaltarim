@@ -4,6 +4,7 @@ using System.Collections;
 public class CircleGun : BaseGun
 {
     public int bulletDensity = 10;
+    public float angleOffset = 0f;
 
     protected override void shoot()
     {
@@ -13,7 +14,7 @@ public class CircleGun : BaseGun
         for (int i = 0; i < bulletDensity; i++)
         {
             float angle = step * i;
-            Quaternion rotation = Quaternion.Euler(0, 0, transform.eulerAngles.z + angle);
+            Quaternion rotation = Quaternion.Euler(0, 0, transform.eulerAngles.z + angle + angleOffset);
             ObjectPool.Instance.Instantiate(bulletPrefab, transform.position, rotation);
         }
     }
