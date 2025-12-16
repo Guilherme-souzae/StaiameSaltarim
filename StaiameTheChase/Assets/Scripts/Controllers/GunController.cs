@@ -3,15 +3,14 @@ using System.Collections.Generic;
 
 public class GunController : MonoBehaviour
 {
-    public List<BaseGun> currentGuns;
+    public List<BaseGun> normalGuns = new List<BaseGun>();
+    public List<BaseGun> grazeGuns = new List<BaseGun>();
 
-    private void Awake()
+    private List<BaseGun> currentGuns = new List<BaseGun>();
+
+    public void Start()
     {
-        // Se não foi usada no Inspector ou está vazia, preenche automaticamente
-        if (currentGuns == null || currentGuns.Count == 0)
-        {
-            currentGuns = new List<BaseGun>(GetComponentsInChildren<BaseGun>());
-        }
+        currentGuns = normalGuns;
     }
 
     void Update()
@@ -25,6 +24,15 @@ public class GunController : MonoBehaviour
                 else
                     Debug.LogError("GunController encontrou um gun NULL dentro de currentGuns!");
             }
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            currentGuns = grazeGuns;
+        }
+        else
+        {
+            currentGuns = normalGuns;
         }
     }
 }

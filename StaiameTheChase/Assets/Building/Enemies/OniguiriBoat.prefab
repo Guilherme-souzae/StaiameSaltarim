@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 1806481450798544451}
   - component: {fileID: 4466488584028480769}
   - component: {fileID: 8221104917236372658}
-  - component: {fileID: 3533679861024141009}
+  - component: {fileID: 2088645583694034093}
+  - component: {fileID: 6728018158458328253}
   m_Layer: 0
   m_Name: OniguiriBoat
   m_TagString: Untagged
@@ -141,7 +142,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.64, y: 1.02}
   m_EdgeRadius: 0
---- !u!114 &3533679861024141009
+--- !u!114 &2088645583694034093
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,15 +151,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 7063301345254179511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1cf38a5b7e1aa64ea07d57a50cf941d, type: 3}
+  m_Script: {fileID: 11500000, guid: 389e5ee463f105a4d9c01371f13fa593, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  actions:
-  - {fileID: 11400000, guid: 43c7b9cde6a2c1a4d8db90d21ddf0142, type: 2}
-  - {fileID: 11400000, guid: d3e9f938bc9f8be489438a9b7209cecc, type: 2}
-  - {fileID: 11400000, guid: d68b426d7280521408346384fb13e9e6, type: 2}
-  - {fileID: 11400000, guid: c36615710c3483543a51f80741049fec, type: 2}
-  hp: 3
+  m_EditorClassIdentifier: Assembly-CSharp::SushiboatEnemi
+  hp: 10
+  fallSpeed: 5
+  fallTime: 1
+--- !u!50 &6728018158458328253
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7063301345254179511}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &829199159225825692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -217,7 +242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8149663875118030328, guid: c6e6374afce24224c8a0db3ff5d5f741, type: 3}
       propertyPath: fireTimes
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8149663875118030328, guid: c6e6374afce24224c8a0db3ff5d5f741, type: 3}
       propertyPath: bulletPrefab
@@ -291,7 +316,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8149663875118030328, guid: c6e6374afce24224c8a0db3ff5d5f741, type: 3}
       propertyPath: fireTimes
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8149663875118030328, guid: c6e6374afce24224c8a0db3ff5d5f741, type: 3}
       propertyPath: angleOffset

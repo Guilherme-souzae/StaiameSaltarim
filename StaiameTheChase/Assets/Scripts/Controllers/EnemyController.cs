@@ -4,28 +4,27 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public List<ScriptableEnemyAction> actions;
+    public float hp = 10;
+    protected Rigidbody2D rb;
+    protected BaseGun[] guns;
 
-    public int hp = 3;
-    private void Start()
+    protected void Awake()
     {
-        StartCoroutine(RunBehavior());
+        rb = GetComponent<Rigidbody2D>();
+        guns = GetComponentsInChildren<BaseGun>();
     }
 
-    private IEnumerator RunBehavior()
+    protected void Start()
     {
-        foreach (var action in actions)
-        {
-            yield return action.CreateAction().Execute(this);
-        }
+        StartCoroutine(Behavior());
     }
 
-    private void OnBecameInvisible()
+    protected void OnBecameInvisible()
     {
         Destroy(gameObject);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("PlayerProjectile"))
         {
@@ -36,5 +35,10 @@ public class EnemyController : MonoBehaviour
                 ObjectPool.Instance.Recycle(gameObject);
             }
         }
+    }
+
+    protected virtual IEnumerator Behavior()
+    {
+        yield return null;
     }
 }
