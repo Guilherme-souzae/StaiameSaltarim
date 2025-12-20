@@ -6,6 +6,9 @@ TagManager:
   tags:
   - EnemyProjectile
   - PlayerProjectile
+  - enemy_projectile
+  - Pickup
+  - Graze
   layers:
   - Default
   - TransparentFX

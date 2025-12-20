@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eba5d61bd0e93b54282b163b91d125ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LineGun
-  bulletPrefab: {fileID: 7883508598213838710, guid: 9271cbc206423684580bbb0865d1b6be, type: 3}
+  bulletPrefab: {fileID: 7883508598213838710, guid: 3263ee8edd65bf2419a3174954aa49ed, type: 3}
   fireRate: 5
   fireTimes: 10
   isContinuous: 0
@@ -302,6 +302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BakenekoEnemi
   hp: 10
+  gemPrefab: {fileID: 300153912745842490, guid: d247ae7a6a5656f4f9006c8b23a8cbc9, type: 3}
   fallSpeed: 5
   fallTime: 1
   zigzagAmplitude: 10

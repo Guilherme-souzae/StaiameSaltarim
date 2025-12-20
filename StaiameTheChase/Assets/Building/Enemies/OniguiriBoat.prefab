@@ -126,7 +126,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -155,6 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SushiboatEnemi
   hp: 10
+  gemPrefab: {fileID: 300153912745842490, guid: d247ae7a6a5656f4f9006c8b23a8cbc9, type: 3}
   fallSpeed: 5
   fallTime: 1
 --- !u!50 &6728018158458328253

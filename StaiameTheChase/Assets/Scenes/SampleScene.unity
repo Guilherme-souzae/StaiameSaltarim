@@ -603,13 +603,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectPool
   prefabs:
+  - {fileID: 300153912745842490, guid: d247ae7a6a5656f4f9006c8b23a8cbc9, type: 3}
   - {fileID: 3588529018339599645, guid: bfff144d1e12bc6428476e71dd34e550, type: 3}
   - {fileID: 6654948142867107242, guid: 448d0a4cb60311f4594d6daebbe698ed, type: 3}
   - {fileID: 7335975917805595925, guid: d172cce8d294dba4ca044d95b82042ca, type: 3}
   - {fileID: 721501483572920071, guid: 319428b760cc2104780d656b70d8b916, type: 3}
   - {fileID: 3651904514588825040, guid: a414fe3ccc881254c83c6ea67f6bec1a, type: 3}
   - {fileID: 7883508598213838710, guid: ee762a7de1e35d544ba211b34fa677fa, type: 3}
-  - {fileID: 7883508598213838710, guid: 9271cbc206423684580bbb0865d1b6be, type: 3}
+  - {fileID: 7883508598213838710, guid: 3263ee8edd65bf2419a3174954aa49ed, type: 3}
   poolSize: 1000
 --- !u!4 &804698787
 Transform:

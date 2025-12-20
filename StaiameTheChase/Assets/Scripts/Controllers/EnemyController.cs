@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public float hp = 10;
+    public GameObject gemPrefab;
     protected Rigidbody2D rb;
     protected BaseGun[] guns;
 
@@ -32,7 +33,8 @@ public class EnemyController : MonoBehaviour
             ObjectPool.Instance.Recycle(collision.gameObject);
             if (hp <= 0)
             {
-                ObjectPool.Instance.Recycle(gameObject);
+                Instantiate(gemPrefab, transform.position, Quaternion.identity);
+                Destroy(gameObject);
             }
         }
     }
