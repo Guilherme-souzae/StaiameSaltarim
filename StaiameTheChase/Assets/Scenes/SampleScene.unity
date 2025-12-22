@@ -583,6 +583,7 @@ GameObject:
   - component: {fileID: 804698787}
   - component: {fileID: 804698786}
   - component: {fileID: 804698788}
+  - component: {fileID: 804698789}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -644,6 +645,27 @@ MonoBehaviour:
   Score: 0
   Graze: 0
   Points: 0
+--- !u!114 &804698789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804698785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d553e3ae219624c4781ff0f5b915bed2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemySpawner
+  spawnIntervals:
+  - 2
+  - 4
+  enemyPrefabs:
+  - {fileID: 8083054797281598409, guid: 2ada36b1e4388854283f3d5a4f130bda, type: 3}
+  - {fileID: 2174245509110202978, guid: 673e6b868c03d97409d9cb494d805a27, type: 3}
+  spawnPositions:
+  - {x: 0, y: 2}
+  - {x: 0, y: 5}
 --- !u!1001 &886311217
 PrefabInstance:
   m_ObjectHideFlags: 0

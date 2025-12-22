@@ -30,7 +30,7 @@ public class Gem : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             PointsManager.Instance.Points++;
-            Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
 }
