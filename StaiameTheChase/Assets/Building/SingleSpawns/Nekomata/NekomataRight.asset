@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a514a160b1259fa41947d468e9f073fd, type: 3}
-  m_Name: BakenekoRight
+  m_Name: NekomataRight
   m_EditorClassIdentifier: Assembly-CSharp::EnemySpawnData
-  enemyPrefab: {fileID: 8083054797281598409, guid: 2ada36b1e4388854283f3d5a4f130bda, type: 3}
-  position: {x: 3, y: 13}
+  enemyPrefab: {fileID: 2033740300188544560, guid: 3979b807accc23b428ad925a455e1ad8, type: 3}
+  position: {x: 4, y: 13}
   spawnDelay: 0

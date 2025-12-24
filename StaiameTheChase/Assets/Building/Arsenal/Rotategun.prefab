@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8582997238132136647}
   - component: {fileID: 2959488871825242248}
   m_Layer: 0
-  m_Name: LineGun 1
+  m_Name: Rotategun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6135676591837292565}
   - component: {fileID: 8174075835553131030}
   - component: {fileID: 854579725423458720}
+  - component: {fileID: 7567869113808840410}
   m_Layer: 0
   m_Name: PizzaProj
   m_TagString: PlayerProjectile
@@ -152,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e3693acfa41c67429e0760c63335e73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
-  speed: 10
+  speed: 30
 --- !u!50 &854579725423458720
 Rigidbody2D:
   serializedVersion: 5
@@ -180,3 +181,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7567869113808840410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7335975917805595925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2ce40061e0084438977a8b87577f2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorShift
+  colorCycleSpeed: 0.1

@@ -17,7 +17,7 @@ public class NekomataEnemi : EnemyController
         guns[0].tryShoot();
         guns[1].tryShoot();
         yield return new WaitForSeconds(2);
-        rb.linearVelocityY = -fallSpeed;
+        rb.linearVelocityY = - 3 * fallSpeed;
 
         zigzagSignal = (Random.value > 0.5f) ? 1 : -1;
         rb.linearVelocityX = -zigzagAmplitude * zigzagSignal;

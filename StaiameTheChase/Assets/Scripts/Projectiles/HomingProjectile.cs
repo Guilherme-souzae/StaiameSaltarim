@@ -13,25 +13,11 @@ public class HomingProjectile : BaseProjectile
     private bool isHoming = false;
     private Transform target;
 
-    private SpriteRenderer spriteRenderer;
-
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
-
     private void OnEnable()
     {
         isHoming = false;
         target = null;
         StartCoroutine(Homing());
-    }
-
-    private void Update()
-    {
-        float hue = Mathf.Repeat(Time.time * colorCycleSpeed, 1f);
-        spriteRenderer.color = Color.HSVToRGB(hue, 1f, 1f);
     }
 
     private void FixedUpdate()
