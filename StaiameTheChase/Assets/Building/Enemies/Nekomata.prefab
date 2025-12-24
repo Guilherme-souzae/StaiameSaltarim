@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5565593723836657360}
   m_Layer: 0
   m_Name: Nekomata
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 534e9ee114f70a74bbe70e34db40369f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NekomataEnemi
-  hp: 10
+  hp: 5
   gemPrefab: {fileID: 300153912745842490, guid: d247ae7a6a5656f4f9006c8b23a8cbc9, type: 3}
   fallSpeed: 5
   fallTime: 1
@@ -198,6 +198,10 @@ PrefabInstance:
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 3651904514588825040, guid: a414fe3ccc881254c83c6ea67f6bec1a, type: 3}
+    - target: {fileID: 2959488871825242248, guid: 26d674ed90355924782fe4a38713ebed, type: 3}
+      propertyPath: rotationSpeed
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 7675693866768907533, guid: 26d674ed90355924782fe4a38713ebed, type: 3}
       propertyPath: m_Name
       value: RotateGunL

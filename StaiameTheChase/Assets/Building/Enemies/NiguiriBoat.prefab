@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1649439608825726512}
   m_Layer: 0
   m_Name: NiguiriBoat
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 389e5ee463f105a4d9c01371f13fa593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SushiboatEnemi
-  hp: 10
+  hp: 15
   gemPrefab: {fileID: 300153912745842490, guid: d247ae7a6a5656f4f9006c8b23a8cbc9, type: 3}
   fallSpeed: 5
   fallTime: 1

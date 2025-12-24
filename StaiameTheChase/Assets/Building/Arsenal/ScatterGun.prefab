@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4982283108766281358
+--- !u!1 &4816902417515789500
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6888894645981830495}
-  - component: {fileID: 2058829795722557128}
+  - component: {fileID: 8844653388417214662}
+  - component: {fileID: 6402607380318960774}
   m_Layer: 0
-  m_Name: SpreadGun
+  m_Name: ScatterGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6888894645981830495
+--- !u!4 &8844653388417214662
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4982283108766281358}
+  m_GameObject: {fileID: 4816902417515789500}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.52943, y: 6.6921, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2058829795722557128
+--- !u!114 &6402607380318960774
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4982283108766281358}
+  m_GameObject: {fileID: 4816902417515789500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f954bc02e7c25b54eb3b3c5adea0f96f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5927ec7d535f86b498e1e3faee9593a2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpreadGun
+  m_EditorClassIdentifier: Assembly-CSharp::ScatterGun
   bulletPrefab: {fileID: 0}
   fireRate: 5
   fireTimes: 10
   isContinuous: 0
   bulletCount: 5
   spreadAngle: 30
+  amplitute: 1

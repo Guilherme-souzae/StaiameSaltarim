@@ -6,9 +6,10 @@ TagManager:
   tags:
   - EnemyProjectile
   - PlayerProjectile
-  - enemy_projectile
   - Pickup
   - Graze
+  - Enemy
+  - Magnet
   layers:
   - Default
   - TransparentFX

@@ -7,6 +7,8 @@ public class NekomataEnemi : EnemyController
     public float fallTime = 1f;
     public float zigzagAmplitude = 10f;
 
+    private int zigzagSignal;
+
     protected override IEnumerator Behavior()
     {
         rb.linearVelocityY = -fallSpeed;
@@ -17,13 +19,14 @@ public class NekomataEnemi : EnemyController
         yield return new WaitForSeconds(2);
         rb.linearVelocityY = -fallSpeed;
 
-        rb.linearVelocityX = -zigzagAmplitude;
+        zigzagSignal = (Random.value > 0.5f) ? 1 : -1;
+        rb.linearVelocityX = -zigzagAmplitude * zigzagSignal;
         yield return new WaitForSeconds(0.25f);
         while (true)
         {
-            rb.linearVelocityX = zigzagAmplitude;
+            rb.linearVelocityX = zigzagAmplitude * zigzagSignal;
             yield return new WaitForSeconds(0.5f);
-            rb.linearVelocityX = -zigzagAmplitude;
+            rb.linearVelocityX = -zigzagAmplitude * zigzagSignal;
             yield return new WaitForSeconds(0.5f);
         }
     }

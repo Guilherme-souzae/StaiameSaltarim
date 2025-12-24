@@ -4,19 +4,51 @@ using System.Collections.Generic;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public List<EnemySpawnData> spawns = new List<EnemySpawnData>();
+    public List<EnemyWaveData> spawns = new List<EnemyWaveData>();
+    public bool loop = true;
+
+    private int index = 0;
 
     private void Start()
     {
-        StartCoroutine(SpawnSequence());
+        if (spawns.Count > 0)
+            StartCoroutine(SpawnLoop());
+    }
+
+    private IEnumerator SpawnLoop()
+    {
+        while (true)
+        {
+            yield return StartCoroutine(SpawnSequence());
+            index++;
+
+            if (index >= spawns.Count)
+            {
+                if (loop)
+                {
+                    index = 0;
+                }
+                else
+                {
+                    yield break;
+                }
+            }
+        }
     }
 
     private IEnumerator SpawnSequence()
     {
-        for (int i = 0; i < spawns.Count; i++)
+        EnemyWaveData currWave = spawns[index];
+        yield return new WaitForSeconds(currWave.startDelay);
+        foreach (EnemySpawnData spawnData in currWave.spawns)
         {
-            yield return new WaitForSeconds(spawns[i].spawnDelay);
-            Instantiate(spawns[i].enemyPrefab, spawns[i].position, Quaternion.identity);
+            StartCoroutine(SpawnEnemy(spawnData));
         }
+    }
+
+    private IEnumerator SpawnEnemy(EnemySpawnData spawnData)
+    {
+        yield return new WaitForSeconds(spawnData.spawnDelay);
+        Instantiate(spawnData.enemyPrefab, spawnData.position, Quaternion.identity);
     }
 }

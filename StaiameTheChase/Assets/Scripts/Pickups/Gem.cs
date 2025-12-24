@@ -5,6 +5,11 @@ public class Gem : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Rigidbody2D rb;
 
+    public float magnetForce = 15f;
+
+    private Transform player;
+    private bool isMagnetized = false;
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -20,6 +25,14 @@ public class Gem : MonoBehaviour
         rb.linearVelocityY = -5;
     }
 
+    private void FixedUpdate()
+    {
+        if (!isMagnetized || player == null) return;
+
+        Vector2 dir = ((Vector2)player.position - rb.position).normalized;
+        rb.linearVelocity = dir * magnetForce;
+    }
+
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
@@ -31,6 +44,11 @@ public class Gem : MonoBehaviour
         {
             PointsManager.Instance.Points++;
             Destroy(gameObject);
+        }
+        else if (collision.CompareTag("Magnet"))
+        {
+            player = collision.transform.root;
+            isMagnetized = true;
         }
     }
 }

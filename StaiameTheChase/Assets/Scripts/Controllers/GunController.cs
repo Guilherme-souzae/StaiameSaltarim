@@ -5,6 +5,7 @@ public class GunController : MonoBehaviour
 {
     public List<BaseGun> normalGuns = new List<BaseGun>();
     public List<BaseGun> grazeGuns = new List<BaseGun>();
+    public List<BaseGun> bombs = new List<BaseGun>();
 
     private List<BaseGun> currentGuns = new List<BaseGun>();
 
@@ -23,6 +24,17 @@ public class GunController : MonoBehaviour
                     gun.tryShoot();
                 else
                     Debug.LogError("GunController encontrou um gun NULL dentro de currentGuns!");
+            }
+        }
+
+        if (Input.GetKey(KeyCode.X))
+        {
+            foreach (var gun in bombs)
+            {
+                if (gun != null)
+                    gun.tryShoot();
+                else
+                    Debug.LogError("GunController encontrou um gun NULL dentro de bombs!");
             }
         }
 

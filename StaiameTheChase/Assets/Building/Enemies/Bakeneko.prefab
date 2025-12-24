@@ -98,6 +98,7 @@ MonoBehaviour:
   isContinuous: 0
   bulletCount: 5
   spreadAngle: 30
+  amplitute: 1
 --- !u!1 &2997553280792004444
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +162,7 @@ GameObject:
   - component: {fileID: 6198351806656717767}
   m_Layer: 0
   m_Name: Bakeneko
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -301,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8bb3a27fd1b69b4499b1b206a48a425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BakenekoEnemi
-  hp: 10
+  hp: 5
   gemPrefab: {fileID: 300153912745842490, guid: d247ae7a6a5656f4f9006c8b23a8cbc9, type: 3}
   fallSpeed: 5
   fallTime: 1

@@ -1,10 +1,11 @@
 using UnityEngine;
 using System.Collections;
 
-public class SpreadGun : BaseGun
+public class ScatterGun : BaseGun
 {
     public int bulletCount = 5;
     public float spreadAngle = 30f;
+    public float amplitute = 1f;
 
     protected override void shoot()
     {
@@ -15,7 +16,10 @@ public class SpreadGun : BaseGun
 
             Quaternion rotation = Quaternion.Euler(0, 0, transform.eulerAngles.z + angle);
 
-            ObjectPool.Instance.Instantiate(bulletPrefab, transform.position, rotation);
+            Vector3 position = transform.position;
+            position.y += Random.Range(-amplitute, amplitute);
+
+            ObjectPool.Instance.Instantiate(bulletPrefab, position, rotation);
         }
     }
 

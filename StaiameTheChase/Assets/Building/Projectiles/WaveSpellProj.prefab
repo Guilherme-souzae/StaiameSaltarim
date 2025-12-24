@@ -179,6 +179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec6f4b2c51d6fd54ea72bf7b62e40922, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaveProjectile
-  vertical_speed: 15
-  frequency: 10
+  vertical_speed: 5
+  frequency: 3
   amplitude: 5
