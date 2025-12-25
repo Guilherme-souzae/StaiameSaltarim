@@ -1,29 +1,22 @@
 using System.Collections;
 using UnityEngine;
 
-public class SuperPizzaProjectile : MonoBehaviour
+public class RotatingBombProjectile : BaseProjectile
 {
     public GameObject explosionPrefab;
-    public float speed = 20f;
+    public float speed = 3f;
     public int explosionQuantity = 10;
     public float rotationSpeed = 10f;
     public float explosionDelay = 1f;
 
     private float clockWise = 1f;
 
-    private Rigidbody2D rb;
-
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
-
     private void OnEnable()
     {
+        rb.linearVelocity = transform.up * speed;
         clockWise = (Random.value > 0.5f) ? 1f : -1f;
         transform.rotation = Quaternion.identity;
         StartCoroutine(Behavior());
-        rb.linearVelocityY = speed;
     }
 
     private void FixedUpdate()

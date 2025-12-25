@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public float hp = 10;
+    public int StartingHp = 10;
     public GameObject gemPrefab;
     protected Rigidbody2D rb;
     protected BaseGun[] guns;
+
+    protected int hp;
 
     protected void Awake()
     {
@@ -17,6 +19,7 @@ public class EnemyController : MonoBehaviour
 
     protected void Start()
     {
+        hp = StartingHp;
         StartCoroutine(Behavior());
     }
 
@@ -33,10 +36,15 @@ public class EnemyController : MonoBehaviour
             ObjectPool.Instance.Recycle(collision.gameObject);
             if (hp <= 0)
             {
-                Instantiate(gemPrefab, transform.position, Quaternion.identity);
-                Destroy(gameObject);
+                OnDie();
             }
         }
+    }
+
+    protected void OnDie()
+    { 
+        Instantiate(gemPrefab, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 
     protected virtual IEnumerator Behavior()

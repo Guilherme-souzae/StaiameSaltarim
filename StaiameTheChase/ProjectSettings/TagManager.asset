@@ -10,6 +10,9 @@ TagManager:
   - Graze
   - Enemy
   - Magnet
+  - Parryable
+  - Undefined
+  - Boss
   layers:
   - Default
   - TransparentFX

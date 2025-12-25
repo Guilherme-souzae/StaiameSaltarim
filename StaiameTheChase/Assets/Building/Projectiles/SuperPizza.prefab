@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 866417396516135955}
   - component: {fileID: 5219453790223485165}
   - component: {fileID: 4827070991229663117}
+  - component: {fileID: 7941441216977949821}
   m_Layer: 0
   m_Name: SuperPizza
   m_TagString: Untagged
@@ -181,6 +182,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SuperPizzaProjectile
   explosionPrefab: {fileID: 1068808143105363807, guid: e46970264b24eaf48af3b615f25616aa, type: 3}
   speed: 10
-  explosionQuantity: 10
+  explosionQuantity: 8
   rotationSpeed: 10
   explosionDelay: 1
+--- !u!114 &7941441216977949821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5742012982403087209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a2ce40061e0084438977a8b87577f2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorShift
+  colorCycleSpeed: 1
